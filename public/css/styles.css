@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(255, 250, 239);
+}
+
+.title-main{
+    text-decoration: none;
+    color: purple;
+}
+
+.button-category{
+    border: 2px solid rgb(202, 202, 202);
+    background: purple;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    transition: all ease 0.2s;
+}
+
+.button-category:hover{
+    background-color: rgb(9, 155, 4);
+    color: white;
+    width: 120px;
+}
+
+a{
+    text-decoration: none;
+}
+
+

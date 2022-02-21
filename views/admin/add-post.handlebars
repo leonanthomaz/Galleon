@@ -1,0 +1,27 @@
+<h2>Nova Postagem</h2>
+<div class="card mt-4">
+    <div class="card-body">
+    <fieldset>
+        <form action="/admin/posts/new" method="POST">
+            <label for="title">Titulo</label>
+            <input type="text" id="title" name="title" placeholder="Digite uma nova postagem" class="form-control">
+            <label for="slug">Slug</label>
+            <input type="text" id="slug" name="slug" placeholder="Selecione a tag da categoria"  class="form-control"><br>
+            <label for="desc">Descrição</label>
+            <input type="text" id="desc" name="desc" placeholder="Escreva uma descrição"  class="form-control"><br>
+            <label for="content">Conteudo</label>
+            <textarea name="content" id="content"class="form-control"></textarea><br>
+            <label for="category">Categoria</label>
+            <select name="category" class="form-control">
+                {{#each categories}}
+                    <option value="{{_id}}">{{name}}</option>
+                {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </select><br>
+            <button type="submit" class="btn btn-primary btn-sm">Nova postagem</button>
+        </form>
+    </fieldset>
+    </div>
+</div>
+

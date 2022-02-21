@@ -1,0 +1,35 @@
+{
+  "name": "galleon",
+  "version": "1.0.0",
+  "description": "Projeto rede social Galleon",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonanthomaz/Galleon.git"
+  },
+  "author": "Leonan Thomaz de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonanthomaz/Galleon/issues"
+  },
+  "homepage": "https://github.com/leonanthomaz/Galleon#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.1.8",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "sweetalert": "^2.1.2"
+  }
+}

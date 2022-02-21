@@ -1,0 +1,16 @@
+<h1>Lista de categorias</h1>
+
+{{#each categories}}
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            <a href="/categories/{{slug}}">
+                <button class="btn btn-primary">{{name}}</button>
+            </a>
+        </nav>
+        </div>
+{{else}}
+    <span>Nenhuma postagem por aqui...</span>
+{{/each}}
+
+
+

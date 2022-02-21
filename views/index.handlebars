@@ -1,0 +1,59 @@
+  <div class="container">
+    <div class="nav-scroller py-1 mb-2">
+      <nav class="nav d-flex justify-content-between">
+      <a class="button-category" href="categories/"><span>Categorias</span></a>
+      <a class="button-category" href="posts/all"> <span>Postagens</span></a>
+      <a class="button-category" href="help/"> <span>Ajuda</span></a>
+      <a class="button-category" href="about/"> <span>Sobre</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        Últimas postagens
+      </h3>
+      <article class="blog-post">
+      {{#each posts}}
+      <div class="card">
+        <div class="card-header">
+          <h5>Categoria: {{category.name}}</h5>
+        </div>
+        <div class="card-body">
+          <h5>{{title}}</h5>
+          <p class="card-text">{{desc}}</p>
+          <p class="card-text">{{content}}</p>
+            <a href="/posts/{{slug}}"><button type="button" class="btn btn-outline-success">Leia mais</button></a>
+          <hr>
+          <small>{{date}}</small>
+        </div>
+      </div><br>
+      {{else}}
+          <h5>Nenhuma postagem.</h5>
+      {{/each}}
+      </article>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Arquivos</h4>
+          <ol class="list-unstyled mb-0">
+            {{#each categories}}
+            <li><a href="#">{{name}}</a></li>
+            {{else}}
+              <li>Sem posts</li>
+            {{/each}}
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </div>

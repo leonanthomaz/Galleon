@@ -1,0 +1,14 @@
+
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<h1>Página do Usuário</h1>
+
+{{#each user}}
+    <img src="{{photo}}" />
+{{else}}
+    <span>Sem foto</span>
+{{/each}}

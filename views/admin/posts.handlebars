@@ -1,0 +1,25 @@
+
+<div class="container">
+<h1>Página de postagens</h1>
+
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+
+{{#each posts}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{title}}</h4>
+            <p>Descrição: {{desc}}</p>
+            <p>Conteudo: {{content}}</p>
+            <small>Data: {{date}}</small><br>
+            <small>Categoria: {{category.name}}</small><br>
+            <a href="/admin/posts/edit/{{_id}}"><button type="submit" class="btn btn-outline-success">Editar postagem</button></a>
+            <a href="/admin/posts/delete/{{_id}}"><button type="submit" class="btn btn-outline-danger">Deletar postagem</button></a>
+        </div>
+    </div>
+{{else}}
+    <p>Nenhuma postagem registrada.</p>
+{{/each}}
+</div>

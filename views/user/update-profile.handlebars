@@ -1,0 +1,33 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Atualizar Foto </h3>
+<div class="card">
+    <div class="card-body">
+        <form accept="" method="POST" enctype="multipart/form-data" action="uploads/">
+            <input type="hidden" value="{{user._id}}" name="id">
+            <input type="file" name="photo" class="form-control" required>
+            <button type="submit" class="btn btn-outline-success mt-2">Atualizar foto</button>
+        </form>
+    </div>
+</div>
+
+<h3>Atualizar conta </h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/user/update/add" method="POST">
+            <input type="hidden" value="{{user._id}}" name="id">
+            <label for="name">Nome: </label>
+                <input type="text" name="name" class="form-control" value="{{user.name}}" required>
+            <label for="email">Email: </label>
+                <input type="email" name="email" class="form-control" value="{{user.email}}" required>
+            <label for="email">foto: </label>
+                <input type="email" name="email" class="form-control" value="{{user.photo}}" required>
+            <button type="submit" class="btn btn-outline-success mt-2">Atualizar conta</button>
+        </form>
+    </div>
+</div>
+

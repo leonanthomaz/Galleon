@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Galleon</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/styles.css" type="text/css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/img/galleon-logo.png">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+
+  <div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <img src="/img/galleon-logo.png" width="100"/>
+      </div>
+      <div class="col-4 text-center">
+        <h1 class="title-main">Galleon</h1>
+      </div>
+      <div class="col-4 d-flex justify-content-end ">
+        {{#if user}}
+         <a class="btn btn-sm btn-outline-secondary" href="/user/logout">Logout</a>
+        {{else}}
+        <a class="btn btn-sm btn-outline-secondary" href="/user/login">Login</a>
+        <a class="btn btn-sm btn-outline-secondary" href="/user/register">Cadastre-se</a>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+  </div>
+
+<main class="container">
+  
+  {{#if erros}}
+      <div class="alert alert-danger">{{erros}}</div>
+  {{else}}
+
+  {{/if}}
+  {{>_msg}}
+  {{{body}}}
+</main>
+
+    
+  </body>
+</html>

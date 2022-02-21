@@ -1,0 +1,26 @@
+<div class="col-4 d-flex justify-content-end align-items-left">
+    <a class="link-secondary" href="#" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+    </a>
+</div>
+<h1>Todas as postagens</h1>
+
+<article class="blog-post">
+{{#each posts}}
+<div class="card">
+<div class="card-header">
+    <h5>Categoria: {{category.name}}</h5>
+</div>
+<div class="card-body">
+    <h5>{{title}}</h5>
+    <p class="card-text">{{desc}}</p>
+    <p class="card-text">{{content}}</p>
+    <a href="/posts/{{slug}}"><button type="button" class="btn btn-outline-success">Leia mais</button></a>
+    <hr>
+    <small>{{date}}</small>
+</div>
+</div>
+{{else}}
+    <h5>Nenhuma postagem.</h5>
+{{/each}}
+</article>

@@ -59,7 +59,7 @@ app.set('view engine', 'handlebars');
 
 // Mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://leonanthomaz:leonan2knet@clusterrevyou.ooqil.mongodb.net/RevYou?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://leonanthomaz:leonan2knet@clustergalleon.cmnd4.mongodb.net/galleon?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {

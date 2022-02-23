@@ -33,4 +33,9 @@ a{
     text-decoration: none;
 }
 
+.box-login{
+    max-width: 500px;
+    margin: auto;
+}
+
 
